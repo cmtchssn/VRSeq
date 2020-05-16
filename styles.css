@@ -34,22 +34,11 @@
     }
 }
 
-@media (min-width:600px) {
-
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-    body {
-        padding: 1% 3% 20%;
-        font-family: 'Orkney Light';
-        color: #0e042b;
-        background-color: #f4f2fa;
-    }
-}
-
 @media (min-width:801px) {
 
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     body {
-        padding: 1% 9% 20%;
+        padding: 1% 6% 20%;
         font-family: 'Orkney Light';
         color: #0e042b;
         background-color: #f4f2fa;
@@ -60,7 +49,7 @@
 
     /* big landscape tablets, laptops, and desktops */
     body {
-        padding: 1% 18% 20%;
+        padding: 1% 12% 20%;
         font-family: 'Orkney Light';
         color: #0e042b;
         background-color: #f4f2fa;
