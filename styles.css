@@ -29,11 +29,29 @@ a:visited {
     /*#0d0621;*/
 }
 
+#author {
+    font-family: 'Latin Modern';
+    font-weight: lighter;
+    margin-top: 0px;
+}
+
 body {
-    padding: 0% 25% 20%;
+    padding: 1% 25% 20%;
     font-family: 'Orkney Light';
     color: #0e042b;
     background-color: #f4f2fa;
+}
+
+#cite {
+    font-family: 'Latin Modern';
+    font-size: medium;
+}
+
+#comment {
+    font-family: 'Latin Modern';
+    font-size: large;
+    text-align: center;
+    margin: 0px 10% 65px;
 }
 
 .flex-container {
@@ -49,19 +67,35 @@ h1 {
 
 h2 {
     font-family: 'Orkney';
+    margin-top: 50px;
 }
 
 h3 {
     font-family: 'Latin Modern';
     font-weight: lighter;
-}
-
-summary {
-    font-family: 'Latin Modern';
+    font-size: x-large;
 }
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+summary {
+    font-family: 'Latin Modern';
+    font-size: large;
+    text-decoration: underline;
+}
+
+#title {
+    margin-bottom: 0px;
+    padding-bottom: 0%;
+}
+
+video {
+    display: block;
+    margin: 75px auto 5px;
+    width: 80%;
+    height: auto;
 }

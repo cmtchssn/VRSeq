@@ -14,8 +14,9 @@
 </head>
 
 <body>
-    <h1>Indeterminate Sample Sequencing in Virtual Reality</h1>
-    <h2 id="author" style="font-family: 'Latin Modern'; font-weight: lighter;">Chase Mitchusson, Experimental Music &
+    <h1 id="title">Indeterminate Sample Sequencing in Virtual Reality</h1>
+    <h2 id="author">Chase Mitchusson, Experimental Music
+        &
         Digital
         Media, Louisiana State University</h2>
     <hr>
@@ -36,131 +37,212 @@
     <hr>
     <h2 id="Abstract">Abstract</h2>
     <p>The purpose of this project is to develop an interface for writing and performing music using sequencers in
-        virtual reality (VR). The VR sequencer deals with chance-based operations to select audio clips for playback and
-        spatial orientation-based rhythm and melody generation, while incorporating three-dimensional (3-D) objects as
-        omnidirectional playheads. The chance-based sample selection, spatial orientation-defined rhythms, and variable
-        terrain mapped to audio effects lead to indeterminacy in performance and replication of a single piece of music.
-        This project aims to give the gaming community access to experimental music making by means of consumer virtual
+        virtual reality (VR). The VR sequencer deals with chance-based operations to select audio clips for playback
+        and
+        spatial orientation-based rhythm and melody generation, while incorporating three-dimensional (3-D) objects
+        as
+        omnidirectional playheads. The chance-based sample selection, spatial orientation-defined rhythms, and
+        variable
+        terrain mapped to audio effects lead to indeterminacy in performance and replication of a single piece of
+        music.
+        This project aims to give the gaming community access to experimental music making by means of consumer
+        virtual
         reality hardware.</p>
+    <video preload="auto" muted autoplay loop>
+        <source src="images/Figure01.mp4" type="video/mp4">
+        <img src="images/Touch1.PNG">
+    </video>
+    <p id="comment">Figure 1: Third-person view of the VR Sequencer with four time-spheres and twelve dice.</p>
     <h2 id="Introduction">Introduction</h2>
-    <p>The VR Sequencer is made for composition and performance, and relies on sample playback as its audio source. A
-        user enters a VR world where they are standing on a 250 square-meter plane. To begin composing or performing,
-        they may enter a menu to select an item to spawn on the stage. If they select a die, it will appear and they can
-        pick it up and throw it wherever they would like. When a time sphere contacts the die, it will trigger playback
-        of the audio clip selected by the die. A musical pattern emerges from the looping sphere. Adding another sphere
+    <p>The VR Sequencer is made for composition and performance, and relies on sample playback as its audio source.
+        A
+        user enters a VR world where they are standing on a 250 square-meter plane. To begin composing or
+        performing,
+        they may enter a menu to select an item to spawn on the stage. If they select a die, it will appear and they
+        can
+        pick it up and throw it wherever they would like. When a time-sphere contacts the die, it will trigger
+        playback
+        of the audio clip selected by the die. A musical pattern emerges from the looping sphere. Adding another
+        sphere
         can complement this pattern with a new one, generating two musical patterns of the same material. With a few
-        adjustments to one of the spheres, it can change speed and trigger a different set of samples to play, leading
+        adjustments to one of the spheres, it can change speed and trigger a different set of samples to play,
+        leading
         to two patterns with two musical ideas from the same dice!</p>
     <p>The VR sequencer uses multiple looping processes and multiple audio banks to create music based on spatial
-        positions of dice and spheres as shown in Figure~\ref{fig:overview}. It is being developed using Unity version
-        2019.1. All scripting of audio processes, asset generation, and user interfaces are done with C#. The VR kit for
+        positions of dice and spheres as shown in Figure 1. It is being developed using Unity
+        version
+        2019.1. All scripting of audio processes, asset generation, and user interfaces are done with C#. The VR kit
+        for
         which the sequencer is being developed is the HTC Vive on Windows 10.</p>
     <h2 id="Three-Dimensional-Assets">Three-Dimensional Assets</h2>
     <h3 id="Dice">Dice</h3>
     <p>Music is composed with the VR sequencer by rolling dice. The chance-based sample selection and
         spatial-location-defined rhythms lead to indeterminacy in performance and replication of a single piece of
-        music. The 3-D assets which represent audio clips are actually audio folder containers that come in six shapes
-        of 4, 6, 8, 10, 12, and 20-sided dice. Dice were chosen because they work well in chance-based operations. They
+        music. The 3-D assets which represent audio clips are actually audio folder containers that come in six
+        shapes
+        of 4, 6, 8, 10, 12, and 20-sided dice. Dice were chosen because they work well in chance-based operations.
+        They
         are designed to be grabbed by users. Once held, the dice can be thrown across the stage to land on an
         indeterminate face. The die face that is touching the ground in the VR sequencer determines which sample is
-        triggered by the time sphere.</p>
+        triggered by the time-sphere.</p>
     <h3 id="Time-and-Space-Spheres">Time-and-Space Spheres</h3>
     <p>Spheres which grow from a variable minimum size to a variable maximum size at a variable speed, constantly
-        looping, represent the passage of time in this VR sequencer. As 3-D assets come in contact with a sphere, their
+        looping, represent the passage of time in this VR sequencer. As 3-D assets come in contact with a sphere,
+        their
         samples are triggered to play. This behavior mimics digital audio workstation (DAW) playheads reading MIDI
         left-to-right in popular professional and consumer software sequencers.</p>
-    <p>Each sphere has a visible, grabbable portion called the space sphere, and an intangible portion which loops and
-        interacts with the audio objects called the time sphere. The space sphere is movable when grabbed, but is
-        unaffected by gravity. Therefore, users can grab a space sphere, move it to a new location, and let the sphere
-        hang in the air where they release it. Time spheres are attached to the space sphere’s location transform,
-        wherever the space sphere goes, the time sphere will follow. However, the user cannot collide with or grab a
-        time sphere, they must interact with the space sphere. The space sphere is like a glass orb and the time sphere
+    <p>Each sphere has a visible, grabbable portion called the space sphere, and an intangible portion which loops
+        and
+        interacts with the audio objects called the time-sphere. The space sphere is movable when grabbed, but is
+        unaffected by gravity. Therefore, users can grab a space sphere, move it to a new location, and let the
+        sphere
+        hang in the air where they release it. Time-spheres are attached to the space sphere’s location transform,
+        wherever the space sphere goes, the time-sphere will follow. However, the user cannot collide with or grab a
+        time-sphere, they must interact with the space sphere. The space sphere is like a glass orb and the time
+        sphere
         is like light pulsing out of the orb.</p>
     <p>To interact with the sphere, a user must grab the space sphere. While holding the space sphere, the user can
-        click the menu button to bring up the time sphere’s editable parameters, shown in Figure~\ref{fig:timeEdit}.
+        click the menu button to bring up the time-sphere’s editable parameters, shown in Figure 2.
         These parameters are:
         <details>
             <summary>Layer</summary>
-            <p>Layer represents a folder containing audio files. There are several folders with various samples in each
+            <p>Layer represents a folder containing audio files. There are several folders with various samples in
+                each
                 one that are assigned to the dice. Choosing a layer decides which audio folder to read from when
-                interacting with the dice. For instance, layer 1 relates to folder 1 which may contain guitar samples,
-                and layer 2 relates to folder 2 which may contain drum samples. The layer chosen for the time sphere
+                interacting with the dice. For instance, layer 1 relates to folder 1 which may contain guitar
+                samples,
+                and layer 2 relates to folder 2 which may contain drum samples. The layer chosen for the time-sphere
                 determines what sample plays when it contacts the dice. This is done so that multiple time-and-space
                 spheres in a scene can add variety to the sample playback.</p>
         </details>
         <details>
             <summary>Minimum Size and Maximum Size</summary>
-            <p>Minimum size determines the smallest size the time sphere can be and maximum size determines the largest
-                size the time sphere can be. The default minimum size is a diameter of 0 meters, and the maximum default
-                is a diameter of 150 meters. Changing the size alters which dice come in contact with the time sphere,
-                therefore altering the melody of the music. A time sphere with a minimum of 80 meters and a maximum of
-                90 meters only comes in contact with a narrow portion of objects, while a minimum of 0 and a maximum of
-                125 will contact nearly every object in the scene. Users can take advantage of size to be selective of
+            <p>Minimum size determines the smallest size the time-sphere can be and maximum size determines the
+                largest
+                size the time-sphere can be. The default minimum size is a diameter of 0 meters, and the maximum
+                default
+                is a diameter of 150 meters. Changing the size alters which dice come in contact with the time
+                sphere,
+                therefore altering the melody of the music. A time-sphere with a minimum of 80 meters and a maximum
+                of
+                90 meters only comes in contact with a narrow portion of objects, while a minimum of 0 and a maximum
+                of
+                125 will contact nearly every object in the scene. Users can take advantage of size to be selective
+                of
                 which dice they want to trigger.</p>
         </details>
         <details>
             <summary>Speed</summary>
-            <p>Speed refers to the time it takes for the time sphere to go from minimum size to maximum size. Speed is
-                listed as integers on a slider, the default being 1. The higher the number, the faster the time sphere
-                moves. Users can change the speed parameter when they want to affect the tempo of a given sphere. There
+            <p>Speed refers to the time it takes for the time-sphere to go from minimum size to maximum size. Speed
+                is
+                listed as integers on a slider, the default being 1. The higher the number, the faster the time
+                sphere
+                moves. Users can change the speed parameter when they want to affect the tempo of a given sphere.
+                There
                 is a hidden unit as well called duration which can change the scale of speed units. A speed of 1 and
-                duration of 1 means one second of time, but a speed of one and a duration of 0.5 means two seconds of
+                duration of 1 means one second of time, but a speed of one and a duration of 0.5 means two seconds
+                of
                 time.</p>
         </details>
         <details>
             <summary>Reverse</summary>
-            <p>Reverse is a check box that determines which direction the time sphere moves. When unchecked, the time
-                sphere grows from minimum size to maximum size, but when reverse is checked it shrinks from maximum size
-                to minimum size. This feature reverses the playback order of the dice it contacts, which adds variety to
-                the music. It is the equivalent of reading a MIDI file in retrograde motion in a traditional DAW.</p>
+            <p>Reverse is a check box that determines which direction the time-sphere moves. When unchecked, the
+                time
+                sphere grows from minimum size to maximum size, but when reverse is checked it shrinks from maximum
+                size
+                to minimum size. This feature reverses the playback order of the dice it contacts, which adds
+                variety to
+                the music. It is the equivalent of reading a MIDI file in retrograde motion in a traditional DAW.
+            </p>
         </details>
         <details>
             <summary>Delete</summary>
             <p>The delete button does exactly as one may suspect, it deletes the currently selected time-and-space
-                sphere. When composing or performing with the VR sequencer, deleting spheres breaks up the monotony in
+                sphere. When composing or performing with the VR sequencer, deleting spheres breaks up the monotony
+                in
                 musical patterns and loops that have been playing too long.</p>
         </details>
     </p>
+    <video preload="auto" muted autoplay loop>
+        <source src="images/Figure02.mp4" type="video/mp4">
+        <img src="images/timeEdit.PNG">
+    </video>
+    <p id="comment">Figure 2: First-person view of a time-sphere having its parameters edited.</p>
     <h2 id="Musical-Interaction">Musical Interaction</h2>
     <p>To incorporate a way to quickly make large musical changes, a terrain generator has been implemented which
         jumbles the dice at the click of a button. The changes can be extremely subtle, barely changing over long
-        periods of time and doing little to jumble the dice, or the changes can be drastic, changing quickly over a few
-        seconds, sending dice flying into the air, shown in Figure~\ref{fig:jumble}.</p>
+        periods of time and doing little to jumble the dice, or the changes can be drastic, changing quickly over a
+        few
+        seconds, sending dice flying into the air, shown in Figure 3.</p>
     <p>Connected to the terrain changes are audio effects changes. There are three different stages with three
-        different audio effects chains connected to the terrain. This adds another level of indeterminacy to the music.
+        different audio effects chains connected to the terrain. This adds another level of indeterminacy to the
+        music.
         The effects, combined with terrain values and dice being re-rolled create what feels like a new section in a
         piece of music, and can have potent impact on the form of the music.</p>
+    <video preload="auto" muted autoplay loop>
+        <source src="images/Figure03.mp4" type="video/mp4">
+        <img src="images/jumble.PNG">
+    </video>
+    <p id="comment">Figure 3: First-person view of the VR Sequencer terrain causing dice to bounce around.</p>
     <h2 id="Evaluation">Evaluation</h2>
-    <p>The most useful features of the current version are the terrain changes and the time sphere parameters. When
+    <p>The most useful features of the current version are the terrain changes and the time-sphere parameters. When
         starting a piece, the composer may want to add several time-spheres to play back one die, like in
-        Figure~\ref{fig:overlap}. By editing the spheres carefully, they can achieve an interesting rhythmic and melodic
-        idea. The layer parameter is an obvious first change to make the die play different samples, but changing the
+        Figure 4. By editing the spheres carefully, they can achieve an interesting rhythmic and
+        melodic
+        idea. The layer parameter is an obvious first change to make the die play different samples, but changing
+        the
         size and speed can enrich the music with rhythmic intricacies. Given that the time-spheres are constantly
-        looping, the music can become tedious, especially when first starting a piece. This is because of the time it
+        looping, the music can become tedious, especially when first starting a piece. This is because of the time
+        it
         takes to spawn several dice and make any changes to the time-sphere. That tediousness is eliminated with the
-        terrain changes. Once the composer deems the music as stale, they can click a button to change the terrain and
+        terrain changes. Once the composer deems the music as stale, they can click a button to change the terrain
+        and
         create something new almost instantly. If what the terrain generates is not worthy of the piece, again, the
         composer can click a button and move on to a new section. Since the audio effects are tied to the terrain
-        changes, the outcomes of the changes can be really fascinating and worth wallowing in for a while. Each massive
+        changes, the outcomes of the changes can be really fascinating and worth wallowing in for a while. Each
+        massive
         change can feel like a fresh start and lead to creative ideas on how to continue the piece.</p>
+    <video preload="auto" muted autoplay loop>
+        <source src="images/Figure04.mp4" type="video/mp4">
+        <img src="images/overlap.PNG">
+    </video>
+    <p id="comment">Figure 4: Third-person view of how multiple time-spheres can be used to play back a single die.</p>
     <h2 id="Future-Work">Future Work</h2>
-    <p>While a way to change everything at once has been incorporated, what is lacking is the ability for a performer to
-        command specific mass interactions such as stopping four time-spheres from triggering audio at one time, or the
+    <p>While a way to change everything at once has been incorporated, what is lacking is the ability for a
+        performer to
+        command specific mass interactions such as stopping four time-spheres from triggering audio at one time, or
+        the
         ability to roll only all D4 at once. When it comes to performing, a constant loop can become grating to
-        listeners, so allowing a performer to conduct the time spheres becomes a necessity. The spatial music production
-        interface from Wozniewski, Settel, and Cooperstock tackles this issue well by allowing performers to dip the
-        volume of source nodes, like using a sampler or mixing board to bring audio in and out
-        \cite{wozniewski2006spatial}. This is a powerful tool that helps develop form and structure while writing music,
-        and cleverly allows for mixing audio using 3-D space.</p>
+        listeners, so allowing a performer to conduct the time-spheres becomes a necessity. The spatial music
+        production interface from Wozniewski, Settel, and Cooperstock tackles this issue well by allowing performers to
+        dip the
+        volume of source nodes, like using a sampler or mixing board to bring audio in and out [1]. This is a powerful
+        tool that helps develop form and structure while writing
+        music, and cleverly allows for mixing audio using 3-D space.</p>
     <h2 id="Conclusions">Conclusions</h2>
     <p>Music making in virtual reality should reach audiences at a consumer level. By stepping away from developing
-        musical VR experiences with hardware and software outside the virtual reality headsets and controllers, people
-        who lack access to special VR events, concerts, and conferences can now enjoy experimental music making in their
-        home. Rather than focus on how acoustic instruments can be replicated in VR, the VR sequencer strives to relate
-        more to musical samplers and sequencers. More than just looping audio clips, the VR sequencer adds indeterminacy
-        in melody making and allows for multiple layers of loops at once to aid in creating interesting rhythmic ideas.
-        Basing interactions around how objects relate to each other in space creates an unorthodox method for writing
+        musical VR experiences with hardware and software outside the virtual reality headsets and controllers,
+        people
+        who lack access to special VR events, concerts, and conferences can now enjoy experimental music making in
+        their
+        home. Rather than focus on how acoustic instruments can be replicated in VR, the VR sequencer strives to
+        relate
+        more to musical samplers and sequencers. More than just looping audio clips, the VR sequencer adds
+        indeterminacy
+        in melody making and allows for multiple layers of loops at once to aid in creating interesting rhythmic
+        ideas.
+        Basing interactions around how objects relate to each other in space creates an unorthodox method for
+        writing
         and performing musical ideas.</p>
+    <h2 id="References">References</h2>
+    <p>
+        <ol>
+            <li id="cite">M. Wozniewski, Z. Settel, and J. R. Cooperstock. A Spatial Interface for Audio and Music
+                Production.
+                In <i>Proceedings of the 9th International Conference on Digital Audio Effects</i>, page 271, 2006.
+            </li>
+        </ol>
+    </p>
     <p>&nbsp;</p>
     <hr>
     <p>&nbsp;</p>
