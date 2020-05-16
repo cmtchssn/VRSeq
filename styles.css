@@ -38,7 +38,7 @@
 
     /* smartphones, Android phones, landscape iPhone */
     body {
-        padding: 1% 4% 20%;
+        padding: 1% 2% 20%;
         font-family: 'Orkney Light';
         color: #0e042b;
         background-color: #f4f2fa;
@@ -49,7 +49,7 @@
 
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
     body {
-        padding: 1% 8% 20%;
+        padding: 1% 4% 20%;
         font-family: 'Orkney Light';
         color: #0e042b;
         background-color: #f4f2fa;
@@ -60,7 +60,7 @@
 
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     body {
-        padding: 1% 12% 20%;
+        padding: 1% 9% 20%;
         font-family: 'Orkney Light';
         color: #0e042b;
         background-color: #f4f2fa;
