@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/orkney/orkney_regular_macroman/orkney-regular-webfont.woff')
+}
+
+@font-face {
+    font-family: 'Orkney Light';
+    src: url('fonts/orkney/orkney_light_macroman/orkney-light-webfont.woff')
+}
+
+@font-face {
+    font-family: 'Orkney Bold';
+    src: url('fonts/orkney/orkney_bold_macroman/orkney-bold-webfont.woff')
+}
+
+@font-face {
+    font-family: 'Garogier';
+    src: url('fonts/garogier/garogier_regular_macroman/Garogier-webfont.woff')
+}
+
+@font-face {
+    font-family: 'Latin Modern';
+    src: url('fonts/latin_modern/latinmodernroman_10italic_macroman/lmroman10-italic-webfont.woff')
+}
+
+a:link,
+a:visited {
+    color: #0e042b;
+    /*#0d0621;*/
+}
+
+body {
+    padding: 0% 25% 20%;
+    font-family: 'Orkney Light';
+    color: #0e042b;
+    background-color: #f4f2fa;
+}
+
+.flex-container {
+    display: flex;
+    height: 250px;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Orkney Bold';
+}
+
+h2 {
+    font-family: 'Orkney';
+}
+
+h3 {
+    font-family: 'Latin Modern';
+    font-weight: lighter;
+}
+
+summary {
+    font-family: 'Latin Modern';
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
