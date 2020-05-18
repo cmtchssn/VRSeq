@@ -29,7 +29,7 @@
     body {
         padding: 1% 1% 20%;
         font-family: 'Orkney Light';
-        color: #0e042b;
+        color: #2E2843;
         background-color: #f4f2fa;
     }
 }
@@ -40,7 +40,7 @@
     body {
         padding: 1% 6% 20%;
         font-family: 'Orkney Light';
-        color: #0e042b;
+        color: #2E2843;
         background-color: #f4f2fa;
     }
 }
@@ -51,7 +51,7 @@
     body {
         padding: 1% 12% 20%;
         font-family: 'Orkney Light';
-        color: #0e042b;
+        color: #2E2843;
         background-color: #f4f2fa;
     }
 }
@@ -62,15 +62,19 @@
     body {
         padding: 1% 25% 20%;
         font-family: 'Orkney Light';
-        color: #0e042b;
+        color: #2E2843;
         background-color: #f4f2fa;
     }
 }
 
 a:link,
 a:visited {
-    color: #0e042b;
+    color: #2E2843;
     /*#0d0621;*/
+}
+
+a:hover {
+    color: #8B0BA7;
 }
 
 #author {
@@ -133,9 +137,18 @@ summary {
     text-decoration: underline;
 }
 
+summary:hover {
+    color: #8B0BA7;
+}
+
 #title {
     margin-bottom: 0px;
     padding-bottom: 0%;
+}
+
+#toc {
+    font-family: 'Latin Modern';
+    font-size: large;
 }
 
 video {
