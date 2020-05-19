@@ -27,10 +27,40 @@
 
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
     body {
-        padding: 1% 1% 20%;
+        padding: 1% 0.75% 20%;
         font-family: 'Orkney Light';
+        font-size: larger;
         color: #2E2843;
         background-color: #f4f2fa;
+    }
+
+    #toc {
+        font-family: 'Latin Modern';
+        font-size: larger;
+    }
+
+    #comment {
+        font-family: 'Latin Modern';
+        font-size: larger;
+        text-align: center;
+        margin: 0px 10% 65px;
+    }
+
+    h3 {
+        font-family: 'Latin Modern';
+        font-weight: lighter;
+        font-size: xx-large;
+    }
+
+    summary {
+        font-family: 'Latin Modern';
+        font-size: larger;
+        text-decoration: underline;
+    }
+
+    #cite {
+        font-family: 'Latin Modern';
+        font-size: larger;
     }
 }
 
@@ -38,10 +68,10 @@
 
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     body {
-        padding: 1% 6% 20%;
-        font-family: 'Orkney Light';
+        padding: 1% 9% 20%;
+        /*font-family: 'Orkney Light';
         color: #2E2843;
-        background-color: #f4f2fa;
+        background-color: #f4f2fa;*/
     }
 }
 
@@ -49,10 +79,31 @@
 
     /* big landscape tablets, laptops, and desktops */
     body {
-        padding: 1% 12% 20%;
-        font-family: 'Orkney Light';
+        padding: 1% 18% 20%;
+        font-size: x-large;
+        /*font-family: 'Orkney Light';
         color: #2E2843;
-        background-color: #f4f2fa;
+        background-color: #f4f2fa;*/
+    }
+
+    #toc {
+        font-size: x-large;
+    }
+
+    #comment {
+        font-size: x-large;
+    }
+
+    h3 {
+        font-size: xx-large;
+    }
+
+    summary {
+        font-size: x-large;
+    }
+
+    #cite {
+        font-size: x-large;
     }
 }
 
@@ -61,9 +112,9 @@
     /* hi-res laptops and desktops */
     body {
         padding: 1% 25% 20%;
-        font-family: 'Orkney Light';
+        /*font-family: 'Orkney Light';
         color: #2E2843;
-        background-color: #f4f2fa;
+        background-color: #f4f2fa;*/
     }
 }
 
@@ -91,17 +142,8 @@ body {
     background-color: #f4f2fa;
 }
 */
-#cite {
-    font-family: 'Latin Modern';
-    font-size: medium;
-}
 
-#comment {
-    font-family: 'Latin Modern';
-    font-size: large;
-    text-align: center;
-    margin: 0px 10% 65px;
-}
+
 
 .flex-container {
     display: flex;
@@ -119,11 +161,7 @@ h2 {
     margin-top: 50px;
 }
 
-h3 {
-    font-family: 'Latin Modern';
-    font-weight: lighter;
-    font-size: x-large;
-}
+
 
 img {
     display: block;
@@ -131,11 +169,7 @@ img {
     margin-right: auto;
 }
 
-summary {
-    font-family: 'Latin Modern';
-    font-size: large;
-    text-decoration: underline;
-}
+
 
 summary:hover {
     color: #8B0BA7;
@@ -146,10 +180,7 @@ summary:hover {
     padding-bottom: 0%;
 }
 
-#toc {
-    font-family: 'Latin Modern';
-    font-size: large;
-}
+
 
 video {
     display: block;
